@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { Container, Navbar } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 // components
 import Home from "./components/pages/Home";
 import SinglePost from "./components/pages/SinglePost";
