@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div>
-            <div className='d-flex justify-content-between mb-4'>
+            <div className='d-flex justify-content-between mb-2'>
                 <h1>All posts</h1>
                 <Link to={"/post/add"}>    
-                    <ButtonAddPost>Add Post</ButtonAddPost>
+                    <ButtonAddPost >Add Post</ButtonAddPost>
                 </Link>    
             </div>
-            <PostsList></PostsList>
+            <PostsList />
         </div>
     );
 };

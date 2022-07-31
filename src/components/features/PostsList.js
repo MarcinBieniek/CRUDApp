@@ -1,8 +1,8 @@
-import PostHeader from './PostHeader';
 import { Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { getAllPosts } from '../../redux/postsRedux';
 import Row from 'react-bootstrap/Row';
+import PostHeader from './PostHeader';
 
 const PostsList = () => {
 
@@ -10,7 +10,7 @@ const PostsList = () => {
 
     return (
         <Container>
-            <Row className="d-flex justify-content-between gap-4">
+            <Row xs={1} md={3} className="justify-content-space-between">
                 {posts.map(post => <PostHeader key={post.id} {...post} />)}          
             </Row>
         </Container>
