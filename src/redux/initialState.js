@@ -25,6 +25,14 @@ const initialState = {
         publishedDate: '02-02-2022',
         author: 'John Doe'
       },
+      {
+        id: '4',
+        title: 'Article title IV',
+        shortDescription: 'Short description of the article...',
+        content: 'Main content of the article',
+        publishedDate: '02-02-2022',
+        author: 'John Doe'
+      },
       
     ]
   
