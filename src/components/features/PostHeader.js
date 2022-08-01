@@ -1,8 +1,10 @@
 //react-gear
-import ButtonRead from "../common/ButtonRead";
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+
+//components
+import Button from 'react-bootstrap/Button';
 
 const PostHeader = props => {
 
@@ -15,9 +17,9 @@ const PostHeader = props => {
                 <Card.Text>{props.shortDescription}</Card.Text>    
 
             <Link to={"/post/" + props.id}>
-                <ButtonRead className="rounded">
+                <Button variant="primary">
                     Read More
-                </ButtonRead>
+                </Button>
             </Link>
 
             </Card>
