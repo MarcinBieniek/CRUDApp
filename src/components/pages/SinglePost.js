@@ -64,7 +64,6 @@ const SinglePost = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-
         </>
     );
 };
