@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap';
 // components
 import Home from "./components/pages/Home";
 import SinglePost from "./components/pages/SinglePost";
-import AddPost from './components/pages/AddPost';
-import EditPost from './components/pages/EditPost';
+import AddPostForm from './components/features/AddPostForm';
+import EditPostForm from './components/features/EditPostForm';
 import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
 import Header from './components/views/Header';
@@ -20,8 +20,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/post/:postId" element={<SinglePost />} />
-            <Route path="/post/add" element={<AddPost />} />
-            <Route path="/post/edit/:id" element={<EditPost />} />
+            <Route path="/post/add" element={<AddPostForm />} />
+            <Route path="/post/edit/:id" element={<EditPostForm />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
