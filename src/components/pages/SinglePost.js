@@ -1,10 +1,10 @@
 //react-gear
 import { Link, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router';
+import { useDispatch } from 'react-redux';
 import { getPostById, deletePost } from '../../redux/postsRedux';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router';
 
 //components
 import Row from 'react-bootstrap/Row';
@@ -36,7 +36,7 @@ const SinglePost = () => {
                     <div className="d-flex justify-content-between mb-4">
                         <h1>{postData.title}</h1>
                         <div>
-                            <Link to={"/post/edit"}>    
+                            <Link to={`/post/edit/${postId}`}>    
                                 <Button variant="outline-info">Edit</Button>
                             </Link>
                             <Button variant="outline-danger" className="ms-2" onClick={handleShow}>Delete</Button>
