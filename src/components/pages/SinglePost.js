@@ -45,7 +45,7 @@ const SinglePost = () => {
                     <Card className="border-0">
                         <Card.Text className={"m-0"}><span className={"fw-bold"}>Author:</span>{' '+ postData.author}</Card.Text>
                         <Card.Text ><span className={"fw-bold"}>Published:</span>{' '+ postData.publishedDate}</Card.Text>
-                        <Card.Text >{postData.content}</Card.Text>
+                        <Card.Text dangerouslySetInnerHTML={{ __html: postData.content }} />
                     </Card>
                 </div>
             </Row>
