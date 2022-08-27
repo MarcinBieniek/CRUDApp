@@ -3,6 +3,11 @@ import {useState} from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+// CSS Modules, react-datepicker-cssmodules.css
+// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+
 // components
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -36,7 +41,14 @@ const PostForm = ({
             </Form.Group>
             <Form.Group className="mb-3 w-50" controlId="postDate">
                 <Form.Label>Date</Form.Label>
-                <Form.Control value={publishedDate} onChange={e => setPublishedDate(e.target.value)} type="date" placeholder="Enter date" />
+
+                <DatePicker 
+                    selected={publishedDate}
+                    onChange={(date) => setPublishedDate(date)} 
+                    type="date" 
+                    placeholder="Enter date"
+                />
+
             </Form.Group>
             <Form.Group className="mb-3" controlId="postDescritpion">
                 <Form.Label>Short description</Form.Label>

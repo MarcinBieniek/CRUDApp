@@ -12,6 +12,8 @@ import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
+import { dateToStr } from '../../utils/dateToStr';
+
 const SinglePost = () => {
 
     const dispatch = useDispatch();
@@ -44,7 +46,7 @@ const SinglePost = () => {
                     </div>
                     <Card className="border-0">
                         <Card.Text className={"m-0"}><span className={"fw-bold"}>Author:</span>{' '+ postData.author}</Card.Text>
-                        <Card.Text ><span className={"fw-bold"}>Published:</span>{' '+ postData.publishedDate}</Card.Text>
+                        <Card.Text ><span className={"fw-bold"}>Published:</span> {dateToStr(postData.publishedDate)}</Card.Text>
                         <Card.Text dangerouslySetInnerHTML={{ __html: postData.content }} />
                     </Card>
                 </div>
